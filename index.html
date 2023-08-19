@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind and daisy  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="my-10">
+      <h1 class="text-center text-5xl text-teal-500 font-bold">Money Master</h1>
+    </header>
+    <main class="container mx-auto">
+      <div class="card lg:card-side w-8/12 mx-auto gap-16 shadow-xl">
+        <div class="w-1/2">
+          <figure>
+            <img src="./images/USD.jpg " alt="Album" />
+          </figure>
+        </div>
+        <div class="card-body items-center text-center pt-0">
+          <p class="text-2xl text-red-500">
+            Before Saving Balance:
+            <span id="saving-balances">1500</span>
+          </p>
+          <h2 class="card-title mb-5">Income</h2>
+          <label for="clothes"
+            >Income:
+            <input
+              id="income-field"
+              type="text"
+              placeholder="Type here"
+              name="clothes"
+              class="input input-bordered input-accent max-w-xs ml-2"
+          /></label>
+          <h2 class="card-title my-2">Expenses</h2>
+          <label for="clothes"
+            >Food:
+            <input
+              id="food-field"
+              type="text"
+              placeholder="Type here"
+              name="clothes"
+              class="input input-bordered input-accent max-w-xs ml-2"
+          /></label>
+          <label for="clothes"
+            >Rent:
+            <input
+              id="rent-field"
+              type="text"
+              placeholder="Type here"
+              name="clothes"
+              class="input input-bordered input-accent max-w-xs ml-2 my-1"
+          /></label>
+          <label for="clothes"
+            >Clothes:
+            <input
+              id="clothes-field"
+              type="text"
+              placeholder="Type here"
+              name="clothes"
+              class="input input-bordered input-accent max-w-xs ml-2"
+          /></label>
+          <div class="card-actions my-3 flow-root">
+            <button
+              onclick="calculation()"
+              class="btn bg-teal-500 text-white w-48 capitalize"
+            >
+              Calculate
+            </button>
+          </div>
+          <h3 class="card-title">
+            Total Expenses: <span id="total-expenses">00</span>
+          </h3>
+          <h3 id="red" class="card-title">
+            Balance: <span id="balance">00</span>
+          </h3>
+          <div>
+            <label for="clothes"
+              >Save:
+              <input
+                id="save-field"
+                type="text"
+                placeholder="Type here"
+                name="clothes"
+                class="input input-bordered input-accent w-[130px] ml-2"
+            /></label>
+            <label for="clothes"
+              >%
+              <button
+                id="save"
+                class="btn bg-teal-500 text-white w-36 capitalize"
+              >
+                Calculate
+              </button>
+            </label>
+          </div>
+          <h3 class="card-title">
+            Saving Amount: <span id="saving-amount">00</span>
+          </h3>
+          <h3 class="card-title">
+            Remaining Balance: <span id="remaining-balance">00</span>
+          </h3>
+        </div>
+      </div>
+    </main>
+    <script src="script/utilities.js"></script>
+    <script src="script/money-master.js"></script>
+  </body>
+</html>
